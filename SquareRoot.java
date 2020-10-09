@@ -1,7 +1,7 @@
 /*
- * Programmer:
- * Date:
- * Purpose: 
+ * Programmer: Kaydnen Dunlop
+ * Date: October, 8. 2020
+ * Purpose: to square root a number
  */
 
 import java.text.DecimalFormat;
@@ -18,12 +18,13 @@ public class SquareRoot {
 
         // Check that the input is not negative
         // TODO: Change this part of the program to repeatedly error check
-        if (radicand < 0) {
+        while (radicand <= 0) {
             System.err.println("Invalid input!");
-            System.exit(1);
+            System.err.print("Enter a number to square root: ");
+            radicand = input.nextDouble();
         }
 
-        // Calculate the circumference
+        // The equation that calculates the 
         double root = Math.sqrt(radicand);
 
         // Create a decimal formatter
@@ -32,5 +33,12 @@ public class SquareRoot {
         // Print the results
         System.out.println("The square root of " + formatter.format(radicand) + 
                 " is " + formatter.format(root) + ".");
+        
+        
+        
+    
+        
     }
+              
+    
 }
